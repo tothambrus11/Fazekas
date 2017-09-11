@@ -18,4 +18,4 @@ szerkeszthető-e!
 
 # Java feladatok haladóknak
 
-Adott egy N*N-es négyzetrács, amelybe számokat írunk. A feladat az, hogy a négyzet északnyugat-délkeleti átlói közül melyikben legnagyobb a számok összege. Ezen a képen(https://github.com/bacsisandor/Fazekas/blob/master/atlok.jpg) láthatsz egy ilyen számokkal feltöltött hálót, és az egyes átlókat más-más színekkel jelölve.
+Adott egy N*N-es négyzetrács, amelybe számokat írunk. A feladat az, hogy a négyzet északnyugat-délkeleti átlói közül melyikben legnagyobb a számok összege. Ezen a képen (https://github.com/bacsisandor/Fazekas/blob/master/atlok.jpg) láthatsz egy ilyen számokkal feltöltött hálót, és az egyes átlókat más-más színekkel jelölve.
