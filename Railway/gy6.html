@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Gyak</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title"></h1>
+</div>
+<h1 id="tesztelés">Tesztelés</h1>
+<p>Az egyes részfeladatokhoz tartoznak külön tesztesetek, amelyeket a feladatok végén jelöltük meg. Ezek önállóan is fordítható és futtatható <code>.java</code> állományok a mellékelt <code>.jar</code> segítségével. Például Windows alatt az első feladathoz tartozó tesztesetek így fordíthatóak és futtathatóak:</p>
+<pre><code>&gt; javac -cp .;tests-Railway.jar tests/Part1.java
+&gt; java -cp .;tests-Railway.jar tests/Part1</code></pre>
+<p>Ugyanezeket a teszteseteket használja a komplett feladathoz tartozó tesztelést végző <code>Test</code> osztály is. Ezt Windows alatt így lehet futtatni:</p>
+<pre><code>&gt; java -cp .;tests-Railway.jar Test</code></pre>
+<p>Linux alatt mindent ugyanúgy lehet fordítani és futtatni, csak a <code>-cp</code> paraméterében a pontosvesszőt kell kettőspontra cserélni.</p>
+<h1 id="a-feladat-összefoglaló-leírása">A feladat összefoglaló leírása</h1>
+<p>A feladatban egy ország vasúthálózatát fogjuk ábrázolni.</p>
+<p>A programhoz tartozik egy egységtesztelő, benne egy <code>railway.txt</code> mintafájl, amely az egyes osztályok funkcionalitását teszteli.</p>
+<h1 id="a-feladat-részletes-ismertetése">A feladat részletes ismertetése</h1>
+<p>A feladatban a <code>rail.Railway</code> és <code>rail.RailMap</code> osztályokat fogjuk több lépésben megvalósítani.</p>
+<p>Legyen minden nyilvános, kivéve ott, ahol a feladat mást határoz meg.</p>
+<p>A városokat <code>String</code>-ként, a távolságot <code>int</code>-ként ábrázoljuk.</p>
+<h2 id="rész-5-1-pont">1. rész (5 + 1 pont)</h2>
+<p>Készítsük el a <code>rail.Railway</code> osztályt. Szerepeljenek benne az alábbi rejtett adattagok.</p>
+<ul>
+<li>Két <code>String</code> városnév (továbbiakban röviden csak város) és egy <code>int</code> távolság.</li>
+</ul>
+<p>Valósítsuk meg továbbá az alábbi nyilvános metódusokat.</p>
+<ul>
+<li><p>Egy konstruktor, mely paraméterül vár két várost és egy távolságot, ezekkel inicializálja az adattagokat.</p></li>
+<li><p>Egy paraméter nélküli <code>getCities()</code>, mely egy (kételemű) tömbben adja vissza a két várost. A sorrend tetszőleges.</p></li>
+<li><p>Egy paraméter nélküli <code>getDistance()</code>, mely visszaadja a távolságot.</p></li>
+</ul>
+<p>Tesztelő: <code>tests.Part1</code></p>
+<!-- rail csomag, Railway adattagok, konstruktor, getCities(), getDistance(). -->
+<h2 id="rész-5-1-pont-1">2. rész (5 + 1 pont)</h2>
+<p>A <code>rail.Railway</code> osztályba vegyük fel az alábbi nyilvános konstanst és metódusokat.</p>
+<ul>
+<li><p>Egy osztályszintű, <code>Railway</code> típusú konstanst <code>KESZTHELY_BUDAPEST</code> névvel. A két város legyen Keszthely és Budapest, a távolság 190.</p></li>
+<li><p>Egy osztályszintű <code>make()</code> metódust, mely egy <code>String</code>-et vár, és egy <code>Railway</code>-t ad vissza. A helyes paraméter két város és egy távolság szóközzel, például: <code>Budapest Eger 140</code>. A <code>make()</code> vizsgálja meg, hogy megvan-e mindhárom rész, a két városnév nem üres szöveg, és a harmadik rész valóban egy szám.</p>
+<p>Azt, hogy egy szöveg egy egész számot tartalmaz kétféleképpen is ellenőrizhetjük.</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Elkapjuk az <a href="https://bead.inf.elte.hu/files/java/api/java/lang/Integer.html#parseInt-java.lang.String-"><code>Integer.parseInt()</code></a> által sikertelen számmá konvertáláskor dobott <a href="https://bead.inf.elte.hu/files/java/api/java/lang/NumberFormatException.html"><code>java.lang.NumberFormatException</code></a> kivételt.</p></li>
+<li><p>Megvizsgáljuk a szöveget, hogy minden karaktere számjegy-e vagy sem a <code>Character.isDigit()</code> metódussal.</p></li>
+</ol></li>
+<li><p>Egy objektumszintű <code>hasEnd()</code> metódust, mely egy várost vár és egy logikai értéket ad vissza. Ha a paraméter város megegyezik valamelyik valamelyik város adattaggal, akkor igazat ad a metódus, különben hamisat.</p></li>
+<li><p>Egy objektumszintű <code>getOtherCity()</code> metódust, mely paraméterül is vár egy várost és vissza is ad egy várost. Ha a paraméter megegyezik a két város adattag közül valamelyikkel, akkor a másikat adja vissza a metódus. Ha a paraméter egyik adattaggal sem egyezik, akkor az eredmény <code>null</code>.</p>
+<p>Például Keszthely-Budapest viszonylatban a <code>getOtherCity(&quot;Budapest&quot;)</code> eredménye <code>&quot;Keszthely&quot;</code>, míg a <code>getOtherCity(&quot;Debrecen&quot;)</code> eredménye <code>null</code>.</p></li>
+</ul>
+<p>Tesztelő: <code>tests.Part2</code></p>
+<!-- Railway.KESZTHELY_BUDAPEST, make(), hasEnd() getOtherCity() -->
+<h2 id="rész-5-1-pont-2">3. rész (5 + 1 pont)</h2>
+<p>Valósítsuk meg a <code>rail.RailMap</code> osztályt is, mely egy ország vasúthálózatát ábrázolja. Legyenek benne az alábbi rejtett adattagok.</p>
+<ul>
+<li>Egy <code>String</code> országnév és egy <code>Railway</code> objektumokat tároló láncolt lista.</li>
+</ul>
+<p>Továbbá legyenek az osztályban az alábbi nyilvános metódusok.</p>
+<ul>
+<li><p>Egy konstruktor, mely paraméterül vár egy <code>String</code> országnevet és egy <code>String</code> fájlnevet. A konstruktor inicializálja az adattagokat és beolvassa a fájlból a vasútvonalakat a listába. Ügyeljünk, hogy ne kerüljön <code>null</code> a listába.</p>
+<p>A fájlkezelésből származó kivételeket nem kell lekezelni, elég, ha a metódus fejlécében specifikáljuk, hogy dobhatunk <code>java.io.IOException</code>-t.</p></li>
+<li><p>Egy paraméter nélküli <code>getCities()</code> metódust, egy <code>String</code>-ekből álló láncolt listában adja vissza az összes várost. Ügyeljünk, hogy minden város csak egyszer szerepeljen a listában.</p></li>
+</ul>
+<p>Tesztelő: <code>tests.Part3</code></p>
+<!-- RailMap adattagok, konstruktor, getEveryCity -->
+<h2 id="rész-5-1-pont-3">4. rész (5 + 1 pont)</h2>
+<ul>
+<li><p>Bővítsük ki a <code>rail.Railway</code> osztályt egy nyilvános <code>toString()</code> metódussal. Példaként a Keszthely-Budapest viszonylatban az alábbi szöveget adja vissza: <code>Railway(Keszthely - Budapest 190)</code>.</p></li>
+<li><p>Bővítsük ki a <code>rail.RailMap</code> osztályt egy nyilvános <code>toString()</code> metódussal, mely a fentihez hasonlóan az országnevet és a vasútvonalakat adja vissza. Például <code>RailMap(Magyarorszag,[Railway(Keszthely - Budapest 190), Railway(Budapest - Salakszentmotoros 40)])</code>.</p></li>
+<li><p>Bővítsük ki a <code>rail.RailMap</code> osztályt egy nyilvános <code>getNeighbours()</code> metódussal, mely egy várost vár paraméterül, és ennek városnak a szomszédos városait adja vissza egy láncolt listában.</p></li>
+</ul>
+<p>Tesztelő: <code>tests.Part4</code></p>
+<!-- Railway.toString(), RailMap.toString(), RailMap.getNeighbours() -->
+<h2 id="rész-5-1-pont-4">5. rész (5 + 1 pont)</h2>
+<ul>
+<li>Bővítsük ki a <code>rail.RailMap</code> osztályt egy paraméter nélküli, <code>String</code> visszatérési típusú <code>capitalCity()</code> metódussal, mely visszaadja azt a várost, melynek legtöbb szomszédja van.</li>
+</ul>
+<p>Tesztelő: <code>tests.Part5</code></p>
+<!-- RailMap.capitalCity() -->
+<h2 id="pontozás-elmélet-gyakorlat">Pontozás (elmélet + gyakorlat)</h2>
+<ul>
+</ul>
+</body>
+</html>
