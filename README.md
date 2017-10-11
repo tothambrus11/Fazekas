@@ -30,10 +30,15 @@ Készíts egy könyv objektumot, melyből hozz létre egy példányt. A könyvne
 Készítsd el a következő metódusokat, mellyel a könyvet kezelni tudod:
 
 kinyit – egy véletlen számú oldalon nyissa ki a könyvet.
+
 bezar – zárja be a könyvet
+
 lapoz – lehessen egyesével lapozni a könyvet az általad megadott irányba (ha a könyv elejére vagy végére érsz, akkor az utolsó lapozás zárja be a könyvet)
+
 porget – lehessen lapozni a könyvet véletlenszerű lapszámmal az általad megadott irányba (ilyenkor nem zárható be)
+
 nez – rá lehessen nézni a könyvre, hogy éppen milyen állapotban van (hol van nyitva, zárva van)
+
 Gondoskodj a megfelelő hibakezelésekről és üzenetekről. A létrehozott Konyv példányt teszteld a megfelelő metódusokkal.
 
 
