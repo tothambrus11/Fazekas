@@ -1,44 +1,19 @@
-# Időpontok
+# Java feladatok kezdőknek (Új feladatok)
+a, Írj egy programot, mely egy N elemű tömbről megmondja, hogy melyik 3 elem összege a legkisebb! 
+b, Írj egy olyan programot, mely egy NxN-es táblázatról eldönti, hogy van e benne két olyan azonos értékű elem, amelyek közvetlenül egymás alatt vagy mellett helyezkednek el! 
 
-Időpont | Téma
-------------------- | -------------
-Szeptember 12. | Ismerkedés, bevezetés
-
-# Java feladatok kezdőknek
-
-Írj programot, amely a paraméterben adott számról eldönti és kiírja annak paritását (páros vagy páratlan)!
-
-Írj programot, mely a paraméterként adott számról eldönti, hogy osztható-e 2-vel, 3-mal és 5‑tel!
-
-Írj programot, mely a paraméterként adott háromszög oldalak hosszúsága alapján eldönti, hogy a háromszög
-szerkeszthető-e!
-
-Írj egy olyan programot, amely véletlen számokkal tölt fel egy 100 elemű egész típusú tömböt, majd megkeresi és kiírja a konzolra a tömbben levő legnagyobb és legkisebb számot!
+c, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet ezekkel kifizetni 100 forintot? (Rekurzió segíthet!)
 
 
-# Java feladatok haladóknak
 
-Adott egy N*N-es négyzetrács, amelybe számokat írunk. A feladat az, hogy a négyzet északnyugat-délkeleti átlói közül melyikben legnagyobb a számok összege. Az alábbi képen láthatsz egy ilyen számokkal feltöltött hálót, és az egyes átlókat más-más színekkel jelölve.
+# Java feladatok haladóknak (Új feladatok)
 
-https://github.com/bacsisandor/Fazekas/blob/master/atlok.jpg
+a, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet ezekkel kifizetni 100 forintot? Listázzuk ki az összes megoldási lehetőséget! (A feladat egyszerűbb változata: a megoldások darabszámát kell kiírni. Lásd a kezdőknél lévő feladatot. A rekurzió itt is segíthet.) 
+
+b, Számítsuk ki, hogy hányféleképpen lehet egy 3×n egység méretű járdát kikövezni 1×2 méretes lapokkal! 3 a sorok számát adja, n pedig az oszlopok számát. (Dinamikus programozás).
 
 
-Könyves feladat - Bevezető OOP
 
-Készíts egy könyv objektumot, melyből hozz létre egy példányt. A könyvnek létrehozásakor véletlen szám sorsolással határozd meg az oldalszámát. A könyv alaphelyzetben zárva legyen.
 
-Készítsd el a következő metódusokat, mellyel a könyvet kezelni tudod:
-
-kinyit – egy véletlen számú oldalon nyissa ki a könyvet.
-
-bezar – zárja be a könyvet
-
-lapoz – lehessen egyesével lapozni a könyvet az általad megadott irányba (ha a könyv elejére vagy végére érsz, akkor az utolsó lapozás zárja be a könyvet)
-
-porget – lehessen lapozni a könyvet véletlenszerű lapszámmal az általad megadott irányba (ilyenkor nem zárható be)
-
-nez – rá lehessen nézni a könyvre, hogy éppen milyen állapotban van (hol van nyitva, zárva van)
-
-Gondoskodj a megfelelő hibakezelésekről és üzenetekről. A létrehozott Konyv példányt teszteld a megfelelő metódusokkal.
 
 
