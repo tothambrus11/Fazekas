@@ -13,6 +13,14 @@ a, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet e
 
 b, Számítsuk ki, hogy hányféleképpen lehet egy 3×n egység méretű járdát kikövezni 1×2 méretes lapokkal! 3 a sorok számát adja, n pedig az oszlopok számát. (Dinamikus programozás).
 
+c, Írj egy Mátrix osztályt, amely segítségével könnyel elvégezhetőek az alábbi műveletek:
+- Mátrixok szorzása
+- Mátrix transzponálása
+- Mátrix invertálása
+- Determináns számolása
+- Sajátérték/sajátvektor számítása
+
+
 
 
 
