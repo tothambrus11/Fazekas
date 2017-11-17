@@ -1,5 +1,6 @@
 # Java feladatok kezdőknek (Új feladatok)
 a, Írj egy programot, mely egy N elemű tömbről megmondja, hogy melyik 3 elem összege a legkisebb! 
+
 b, Írj egy olyan programot, mely egy NxN-es táblázatról eldönti, hogy van e benne két olyan azonos értékű elem, amelyek közvetlenül egymás alatt vagy mellett helyezkednek el! 
 
 c, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet ezekkel kifizetni 100 forintot? (Rekurzió segíthet!)
