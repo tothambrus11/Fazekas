@@ -1,24 +1,8 @@
-# Feladatok kezdőknek (Új feladatok)
-a, Írj egy programot, mely egy N elemű tömbről megmondja, hogy melyik 3 elem összege a legkisebb! 
+# Új feladatok
 
-b, Írj egy olyan programot, mely egy NxN-es táblázatról eldönti, hogy van e benne két olyan azonos értékű elem, amelyek közvetlenül egymás alatt vagy mellett helyezkednek el! 
+Írj egy olyan eljárást, mely kap egy egész paramétert (N) és a képernyőre írat egy olyan NxNes elrendezést, ahol minden elem a legkisebb értéket tartalmazza azok közül, hogy hány elem van tőle jobbra, balra, felette és alatta! (N<10) 
 
-c, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet ezekkel kifizetni 100 forintot? (Rekurzió segíthet!)
-
-
-
-# Feladatok haladóknak (Új feladatok)
-
-a, Adott egy zsák 5, 10, 20 és 50 forintos érménk. Hányféleképpen lehet ezekkel kifizetni 100 forintot? Listázzuk ki az összes megoldási lehetőséget! (A feladat egyszerűbb változata: a megoldások darabszámát kell kiírni. Lásd a kezdőknél lévő feladatot. A rekurzió itt is segíthet.) 
-
-b, Számítsuk ki, hogy hányféleképpen lehet egy 3×n egység méretű járdát kikövezni 1×2 méretes lapokkal! 3 a sorok számát adja, n pedig az oszlopok számát. (Dinamikus programozás).
-
-c, Írj egy Mátrix osztályt, amely segítségével könnyel elvégezhetőek az alábbi műveletek:
-- Mátrixok szorzása
-- Mátrix transzponálása
-- Mátrix invertálása
-- Determináns számolása
-- Sajátérték/sajátvektor számítása
+Készítsen programot, amely egy 10x10-es táblázatot véletlenszerűen feltölt 0-kal és 1-esekkel. Az egyes jelentse a falat, a 0-k helyén szabadon közlekedhetünk. A program kérjen be két koordinátát(A-t és B-t) és döntse el, hogy el tudunk –e jutni A pontból B pontba úgy, hogy csak nullákra lépünk és csak vízszintesen és függőlegesen mozoghatunk. Adja meg a program a lépések számát is.
 
 
 
